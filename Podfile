@@ -8,7 +8,9 @@ target 'EosioSwiftAbieos' do
   target 'EosioSwiftAbieosTests' do
     inherit! :search_paths
     # Pods for testing
-  end
+  pod 'GRKOpenSSLFramework'
+  pod 'EosioSwift', :path => '../eosio-swift'
+end
 
   # Pods for EosioSwiftAbieos
   pod 'GRKOpenSSLFramework'
