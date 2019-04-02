@@ -9,15 +9,6 @@ steps:
   - 
     agents: 
       - queue=vm-ios-agent
-    command: "source ~/.bash_profile && bundle install && bundle exec fastlane build"
-    env: 
-      LANG: en_US.UTF-8
-      LC_ALL: en_US.UTF-8
-    label: ":fastlane: build"
-  - wait
-  - 
-    agents: 
-      - queue=vm-ios-agent
     artifact_paths: 
       - build/reports/junit.xml
       - code_coverage_report/*
