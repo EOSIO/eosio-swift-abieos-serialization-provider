@@ -1,6 +1,6 @@
 //
-//  ABIEOS.swift
-//  EosioSwiftAbieos
+//  EosioAbieosSerializationProvider.swift
+//  EosioAbieosSerializationProvider
 //
 //  Created by Todd Bowden on 6/16/18.
 //  Copyright © 2018-2019 block.one.
@@ -9,7 +9,7 @@
 import Foundation
 import EosioSwift
 
-public class AbiEos: EosioSerializationProviderProtocol {
+public class EosioAbieosSerializationProvider: EosioSerializationProviderProtocol {
 
     public class Error: EosioError { }
 
@@ -46,7 +46,7 @@ public class AbiEos: EosioSerializationProviderProtocol {
 
     private func getAbiJsonFile(fileName: String) throws -> String {
         var abiString = ""
-        let path = Bundle(for: AbiEos.self).url(forResource: fileName, withExtension: nil)?.path ?? ""
+        let path = Bundle(for: EosioAbieosSerializationProvider.self).url(forResource: fileName, withExtension: nil)?.path ?? ""
         abiString = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue) as String
         guard abiString != "" else {
             throw Error(.serializationProviderError, reason: "Json to hex -- No ABI file found for \(fileName)")
