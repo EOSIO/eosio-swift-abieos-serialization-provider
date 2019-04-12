@@ -1,17 +1,36 @@
-# Uncomment the next line to define a global platform for your project
+using_local_pods = true
+
+unless using_local_pods
+  source 'https://github.com/EOSIO/eosio-swift-pod-specs.git'
+  source 'https://github.com/CocoaPods/Specs.git'
+end
+
 platform :ios, '12.0'
 
-target 'EosioSwiftAbieos' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+if using_local_pods
+  # Pull pods from sibling directories if using local pods
+  target 'EosioSwiftAbieosSerializationProvider' do
+    use_frameworks!
 
-  target 'EosioSwiftAbieosTests' do
-    inherit! :search_paths
-    # Pods for testing
+    pod 'EosioSwift', :path => '../eosio-swift'
+    pod 'SwiftLint'
+
+    target 'EosioSwiftAbieosTests' do
+      inherit! :search_paths
+      pod 'EosioSwift', :path => '../eosio-swift'
+    end
   end
+else
+  # Pull pods from sources above if not using local pods
+  target 'EosioSwiftAbieosSerializationProvider' do
+    use_frameworks!
 
-  # Pods for EosioSwiftAbieos
-  pod 'GRKOpenSSLFramework'
-  pod 'EosioSwift', :path => '../eosio-swift'
-  
+    pod 'EosioSwift', '~> 0.0.1'
+    pod 'SwiftLint'
+
+    target 'EosioSwiftAbieosTests' do
+      inherit! :search_paths
+      pod 'EosioSwift', '~> 0.0.1'
+    end
+  end
 end

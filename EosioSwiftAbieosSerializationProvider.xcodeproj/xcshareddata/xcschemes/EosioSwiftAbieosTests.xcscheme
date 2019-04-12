@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -19,7 +19,7 @@
                BlueprintIdentifier = "B4EAD99221925E79009D3E04"
                BuildableName = "EosioSwiftAbieosTests.xctest"
                BlueprintName = "EosioSwiftAbieosTests"
-               ReferencedContainer = "container:EosioSwiftAbieos.xcodeproj">
+               ReferencedContainer = "container:EosioSwiftAbieosSerializationProvider.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
