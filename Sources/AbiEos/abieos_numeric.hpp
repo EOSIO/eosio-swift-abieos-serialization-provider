@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include <algorithm>
 #include <array>
+#include <algorithm>
 #include <stdint.h>
 #include <string>
 #include <string_view>
