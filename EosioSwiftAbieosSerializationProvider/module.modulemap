@@ -1,0 +1,4 @@
+module Abieos {
+    header "../abieos/src/abieos.h"
+    export *
+}

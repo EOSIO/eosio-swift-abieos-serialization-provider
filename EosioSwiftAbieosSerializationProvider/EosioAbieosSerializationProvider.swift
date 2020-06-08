@@ -8,6 +8,7 @@
 
 import Foundation
 import EosioSwift
+import Abieos
 
 /// Serialization provider implementation for EOSIO SDK for Swift using ABIEOS.
 /// Responsible for ABI-driven transaction and action serialization and deserialization
