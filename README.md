@@ -1,6 +1,8 @@
 ![Swift Logo](https://github.com/EOSIO/eosio-swift-abieos-serialization-provider/raw/master/img/swift-logo.png)
 # EOSIO SDK for Swift: ABIEOS Serialization Provider ![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
 
+:warning:  **Notice!!  This repository is deprecated and will no longer receive updates.   The functionality previously provided here has been incorporated into [EOSIO SDK for Swift](https://github.com/EOSIO/eosio-swift) in the 1.0.0 release.**
+
 [![Software License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/EOSIO/eosio-swift/blob/master/LICENSE)
 ![Language C++/Swift](https://img.shields.io/badge/Language-C%2B%2B%2FSwift-yellow.svg)
 ![](https://img.shields.io/badge/Deployment%20Target-iOS%2012-blue.svg)
